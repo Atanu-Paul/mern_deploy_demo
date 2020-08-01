@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const cors = require("cors");
 const User = require("./model/user");
 const connectDB = require("./dbcon");
@@ -11,7 +11,7 @@ const PORT = 8080;
 
 connectDB();
 
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
